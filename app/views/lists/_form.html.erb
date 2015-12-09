@@ -1,0 +1,11 @@
+<%= simple_form_for(@list) do |f| %>
+  <%= f.error_notification %>
+   <%= f.input :name %>
+   <%= f.input :price, placeholder: "prices should be in US dollar" %>
+   <%= f.input :category %>
+   <%= f.input :color, placeholder: "any color is cool" %>
+   <%= f.input :size, placeholder: "size small-large or n/s" %>
+   <%= f.input :priority, collection: 1..5, as: :radio_buttons, hint: "(1 = You better by me this, 5 = I kinda want this)" %>
+   <%= f.file_field :avatar %>
+   <%= f.button :submit %>
+<% end %>
